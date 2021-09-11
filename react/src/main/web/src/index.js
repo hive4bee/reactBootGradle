@@ -1,13 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter, Switch, Route} from "react-router-dom";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <BrowserRouter basename={'/dashboard'}>
+        <Switch>
+            <Route path={'/main'}>
+                <div>hello world, main page</div>
+            </Route>
+            <Route path={'/ansj'}>
+                <div>hello ansj, ansj page</div>
+            </Route>
+        </Switch>
+    </BrowserRouter>
+    ,
   document.getElementById('root')
 );
 
